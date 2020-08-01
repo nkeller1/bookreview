@@ -7,8 +7,8 @@ addons:
 # dist: trusty
 # before_script:
 #   - psql -c 'create database travis_ci_test;' -U postgres
-# script:
-# - bundle exec rails db:{create,migrate,seed}
-# - bundle exec rspec
+script:
+- bundle exec rails db:{create,migrate,seed}
+- bundle exec rspec
 # services:
 #   - postgresql
