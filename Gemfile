@@ -16,7 +16,16 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'awesome_print'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'foundation-rails'
+  gem 'launchy'
+  gem 'pry'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
+  gem 'travis'
 end
 
 group :development do
