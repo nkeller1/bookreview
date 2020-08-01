@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'welcome index page', type: :feature do
-  it "can navigate to the weclome page" do
+  it "can navigate to the welcome page" do
 
     visit '/'
 
