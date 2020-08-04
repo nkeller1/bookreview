@@ -16,8 +16,6 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.factory_bot.definition_file_paths = ["custom/factories"]
-
 module Bookreview
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
