@@ -19,6 +19,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
   gem 'foundation-rails'
   gem 'launchy'
   gem 'pry'
@@ -29,6 +30,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'factory_bot_rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

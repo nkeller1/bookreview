@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'books page', type: :feature do
+RSpec.describe 'books index page', type: :feature do
   it "can navigate to /books" do
     visit '/'
 
@@ -9,4 +9,6 @@ RSpec.describe 'books page', type: :feature do
     expect(current_path).to eq('/books')
     expect(page).to have_content("Book List")
   end
+
+  
 end
