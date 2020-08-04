@@ -7,5 +7,6 @@ RSpec.describe 'books page', type: :feature do
     click_on 'All Books'
 
     expect(current_path).to eq('/books')
+    expect(page).to have_content("Book List")
   end
 end
