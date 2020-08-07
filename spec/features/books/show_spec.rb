@@ -9,9 +9,10 @@ RSpec.describe 'books index page', type: :feature do
       published: 2001
     )
 
-    visit '/books'
+    visit "/books/#{book1.id}"
 
-    expect(page).to have_content('Way of Kings')
     expect(page).to have_content('Words of Radiance')
+    expect(page).to have_content('Brandon Sanderson')
+    expect(page).to have_content(1200)
   end
 end
