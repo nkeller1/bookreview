@@ -1,4 +1,4 @@
-equire 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe 'books index page', type: :feature do
   it "can see a list of all books" do
