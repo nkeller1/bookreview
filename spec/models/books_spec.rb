@@ -8,6 +8,11 @@ RSpec.describe Book, type: :model do
     it { should validate_presence_of :published }
   end
 
+  describe 'relationships' do
+    it { should have_many :authors }
+    it { should have_many(:authors).through(:author_books) }
+  end
+
   it "has attributes" do
     book1 = Book.new(
       title: 'Words of Radiance',
