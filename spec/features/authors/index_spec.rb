@@ -11,7 +11,7 @@ RSpec.describe 'authors index page', type: :feature do
     )
 
     visit "/authors"
-
+    
     expect(page).to have_content('Brandon Saunderson')
     expect(page).to have_content('Edgar Allen Poe')
   end

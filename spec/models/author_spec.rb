@@ -5,6 +5,11 @@ RSpec.describe Author, type: :model do
     it { should validate_presence_of :name }
   end
 
+  describe 'relationships' do
+    it { should have_many :books }
+    it { should have_many(:books).through(:author_books) }
+  end
+
   it "has attributes" do
     author1 = Author.create(
       name: 'Brandon Sanderson'
