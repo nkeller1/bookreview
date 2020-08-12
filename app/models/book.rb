@@ -13,4 +13,8 @@ class Book < ApplicationRecord
     self.ratings.length
   end
 
+  def gather_three_highest_reviews
+    self.ratings.order('rating DESC').limit(3)
+  end
+
 end
