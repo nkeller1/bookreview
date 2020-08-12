@@ -9,5 +9,8 @@ class Book < ApplicationRecord
     self.ratings.average(:rating).to_f.round(2)
   end
 
-  
+  def count_total_reviews
+    self.ratings.length
+  end
+
 end
