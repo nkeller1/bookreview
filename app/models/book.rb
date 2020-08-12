@@ -17,4 +17,7 @@ class Book < ApplicationRecord
     self.ratings.order('rating DESC').limit(3)
   end
 
+  def gather_three_lowest_reviews
+    self.ratings.order(:rating).limit(3)
+  end
 end
