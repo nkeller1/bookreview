@@ -65,7 +65,7 @@ RSpec.describe Author, type: :model do
         description: 'Yay',
         rating: 4)
 
-      expect(author.average_book_rating).to eq(book1)
+      expect(author.average_book_rating).to eq(3.75)
     end
   end
 end
