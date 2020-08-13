@@ -10,4 +10,11 @@ class Author < ApplicationRecord
     end
     average_all_books.sum / average_all_books.length
   end
+
+  def count_total_reviews
+    total_reviews = self.books.map do |book|
+      book.ratings.length
+    end
+    total_reviews.sum
+  end
 end
