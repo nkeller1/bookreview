@@ -30,6 +30,11 @@ RSpec.describe Book, type: :model do
   end
 
   it ".average_rating" do
+    user = User.create(name: 'Nate',
+      email: 'example@example.com',
+      password_digest: 'hello'
+    )
+
     book1 = Book.create(
       title: 'Words of Radiance',
       author: 'Brandon Sanderson',
@@ -40,23 +45,31 @@ RSpec.describe Book, type: :model do
     book1.ratings.create(
       title: 'awesome',
       description: 'sweet',
-      rating: 5)
+      rating: 5,
+      user_id: user.id
+    )
 
     book1.ratings.create(
       title: 'Could be Better',
       description: 'So manhy words',
-      rating: 2)
+      rating: 2,
+      user_id: user.id
+    )
 
     book1.ratings.create(
       title: 'awesome',
       description: 'sweet',
       rating: 3)
 
-
-    expect(book1.average_rating).to eq(3.33)
+    expect(book1.average_rating).to eq(3.5)
   end
 
   it ".count_total_reviews" do
+    user = User.create(name: 'Nate',
+      email: 'example@example.com',
+      password_digest: 'hello'
+    )
+
     book1 = Book.create(
       title: 'Words of Radiance',
       author: 'Brandon Sanderson',
@@ -67,22 +80,33 @@ RSpec.describe Book, type: :model do
     rating1 = book1.ratings.create(
       title: 'awesome',
       description: 'sweet',
-      rating: 5)
+      rating: 5,
+      user_id: user.id
+    )
 
     rating2 = book1.ratings.create(
       title: 'Could be Better',
       description: 'So manhy words',
-      rating: 2)
+      rating: 2,
+      user_id: user.id
+    )
 
     rating3 = book1.ratings.create(
       title: 'awesome',
       description: 'sweet',
-      rating: 3)
+      rating: 3,
+      user_id: user.id
+    )
 
     expect(book1.count_total_reviews).to eq(3)
   end
 
   it ".gather_three_highest_reviews" do
+    user = User.create(name: 'Nate',
+      email: 'example@example.com',
+      password_digest: 'hello'
+    )
+
     book1 = Book.create(
       title: 'Words of Radiance',
       author: 'Brandon Sanderson',
@@ -93,27 +117,40 @@ RSpec.describe Book, type: :model do
     rating1 = book1.ratings.create(
       title: 'awesome',
       description: 'sweet',
-      rating: 5)
+      rating: 5,
+      user_id: user.id
+    )
 
     rating2 = book1.ratings.create(
       title: 'Could be Better',
       description: 'So manhy words',
-      rating: 2)
+      rating: 2,
+      user_id: user.id
+    )
 
     rating3 = book1.ratings.create(
       title: 'Cool',
       description: 'Yay',
-      rating: 3)
+      rating: 3,
+      user_id: user.id
+    )
 
     rating4 = book1.ratings.create(
       title: 'Hello',
       description: 'test',
-      rating: 4)
+      rating: 4,
+      user_id: user.id
+    )
 
     expect(book1.gather_three_highest_reviews).to eq([rating1, rating4, rating3])
   end
 
   it ".gather_three_lowest_reviews" do
+    user = User.create(name: 'Nate',
+      email: 'example@example.com',
+      password_digest: 'hello'
+    )
+
     book1 = Book.create(
       title: 'Words of Radiance',
       author: 'Brandon Sanderson',
@@ -124,22 +161,30 @@ RSpec.describe Book, type: :model do
     rating1 = book1.ratings.create(
       title: 'awesome',
       description: 'sweet',
-      rating: 5)
+      rating: 5,
+      user_id: user.id
+    )
 
     rating2 = book1.ratings.create(
       title: 'Could be Better',
       description: 'So manhy words',
-      rating: 2)
+      rating: 2,
+      user_id: user.id
+    )
 
     rating3 = book1.ratings.create(
       title: 'Cool',
       description: 'Yay',
-      rating: 3)
+      rating: 3,
+      user_id: user.id
+    )
 
     rating4 = book1.ratings.create(
       title: 'Hello',
       description: 'test',
-      rating: 4)
+      rating: 4,
+      user_id: user.id
+    )
 
     expect(book1.gather_three_lowest_reviews).to eq([rating2, rating3, rating4])
   end
