@@ -5,4 +5,8 @@ class User < ApplicationRecord
   validates :password, confirmation: { presence: true, case_sensitive: true }
 
   has_secure_password
+
+  def count_total_reviews
+    self.ratings.length
+  end
 end
