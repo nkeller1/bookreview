@@ -5,9 +5,9 @@ class Poem
               :poet
 
   def initialize(info)
-    @title = info[:title]
-    @content = info[:content]
-    @url = info[:url]
-    @poet = info[:poet]
+    @title = info.first[:title]
+    @content = info.first[:content]
+    @url = info.first[:url]
+    @poet = info.first[:poet]
   end
 end
