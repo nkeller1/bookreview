@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'poems page', type: :feature do
-  it "randomly GETS a random poem" do
+  it "randomly GETS a random poem", :vcr do
 
     visit "/poems"
 
