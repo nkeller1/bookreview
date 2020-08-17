@@ -14,5 +14,6 @@ f his hardiness.\nOf such a root cometh fruit fruitless.",
     )
 
     expect(poem1.title).to eq("Avising The Bright Beams")
+    expect(poem1.poet).to eq("Sir Thomas Wyatt")
   end
 end
