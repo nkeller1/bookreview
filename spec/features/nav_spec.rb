@@ -16,4 +16,12 @@ RSpec.describe 'Top Nav Bar', type: :feature do
 
     expect(current_path).to eq('/books')
   end
+
+  it "Navigates to books page" do
+    visit '/'
+
+    click_link 'Poem of the Day'
+
+    expect(current_path).to eq('/poems')
+  end
 end
