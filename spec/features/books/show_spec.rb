@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'books index page', type: :feature do
-  it "can see a list of all books" do
+RSpec.describe 'books show page', type: :feature do
+  it "can see a list of all books and thier attributes" do
     book1 = Book.create(
       title: 'Words of Radiance',
       author: 'Brandon Sanderson',
@@ -51,9 +51,8 @@ RSpec.describe 'books index page', type: :feature do
     expect(page).to have_content('Words of Radiance')
     expect(page).to have_content('Brandon Sanderson')
     expect(page).to have_content(1200)
-    expect(page).to have_content(3.5)
-    expect(page).to have_content(4)
+    expect(page).to have_content(3.3)
+    expect(page).to have_content(5)
     expect(page).to have_content('awesome')
-
   end
 end
