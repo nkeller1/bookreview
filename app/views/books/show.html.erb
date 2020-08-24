@@ -2,15 +2,16 @@
 
 
 <h3>
-  <%= @book.author %> <br>
-  <%= @book.pages %> <br>
-  <%= @book.published %> <br>
-  <%= @book.average_rating %> <br>
-  <%= @book.count_total_reviews %>
+  Author: <%= @book.author %> <br>
+  Total Pages: <%= @book.pages %> <br>
+  Published: <%= @book.published %> <br>
+  Average User Rating: <%= @book.average_rating %> <br>
+  Total Reviews: <%= @book.count_total_reviews %>
   <br><br>
+  Three Highest Reviews:
   <% @book.gather_three_highest_reviews.each do |rating| %>
-    <%= rating.title %> <br>
-    <%= rating.description %> <br>
-    <%= rating.rating %> <br>
+    Title: <%= rating.title %> <br>
+    Description: <%= rating.description %> <br>
+    Rating: <%= rating.rating %> <br>
   <% end %>
 </h3>
