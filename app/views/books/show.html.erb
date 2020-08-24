@@ -9,7 +9,7 @@
   Total Reviews: <%= @book.count_total_reviews %>
   <br><br>
   Three Highest Reviews:
-  <% @book.gather_three_highest_reviews.each do |rating| %>
+  <% @book.gather_three_highest_reviews.each do |rating| %> <br>
     Title: <%= rating.title %> <br>
     Description: <%= rating.description %> <br>
     Rating: <%= rating.rating %> <br>
