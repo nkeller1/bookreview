@@ -2,8 +2,8 @@
 
 
 <% @books.each do |book| %>
-  <%= book.title %>
-  <%= book.pages %>
-  <%= book.published %>
-  <%= book.author %>
+  Title: <%= link_to book.title, "/books/#{book.id}" %> <br>
+  Pages: <%= book.pages %> <br>
+  Published: <%= book.published %> <br>
+  Author: <%= book.author %> <br> <br>
 <% end %>
