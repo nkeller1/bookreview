@@ -51,7 +51,6 @@ RSpec.describe 'books show page', type: :feature do
 
     expect(page).to have_content('Words of Radiance')
     expect(page).to have_content('Brandon Sanderson')
-    expect(page).to have_content(1200)
     expect(page).to have_content(3.3)
   end
 end
