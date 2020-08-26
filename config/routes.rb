@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get '/poems', to: 'poems#index'
 
-  get 'users', to: 'users#show'
+  get 'users/:id', to: 'users#show'
 end
