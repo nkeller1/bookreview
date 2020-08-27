@@ -21,7 +21,6 @@ RSpec.describe 'book create page', type: :feature do
     pages = 1392
     published = 1999
     author = "Brandon Sanderson"
-    author.id = author1.id
 
     visit '/books'
 
