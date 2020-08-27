@@ -1,0 +1,18 @@
+<h1> Add New Book </h1>
+
+
+<%= form_tag "/books", method: :post do %>
+    <%= label_tag :title %>
+    <%= text_field_tag :title%>
+
+    <%= label_tag :pages %>
+    <%= text_field_tag :pages %>
+
+    <%= label_tag :published %>
+    <%= text_field_tag :published %>
+
+    <%= label_tag :author %>
+    <%= text_field_tag :author %>
+
+    <%= submit_tag 'Add Book' %>
+  <% end %>
