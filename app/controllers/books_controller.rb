@@ -10,6 +10,12 @@ class BooksController < ApplicationController
   def new; end
 
   def create
-    require "pry"; binding.pry
+    book = Book.create(book_params)
+    redirect_to '/books'
   end
+
+  private
+    def book_params
+      params.permit(:title, :published, :pages, :author)
+    end
 end
